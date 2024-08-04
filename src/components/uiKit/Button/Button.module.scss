@@ -1,0 +1,33 @@
+.root {
+  padding: 20px 40px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: var(--light-gray);
+  display: inline-flex;
+  transition: 0.2s;
+  width: max-content;
+  white-space: nowrap;
+  text-align: center;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      background-color: var(--white);
+    }
+  }
+
+  &.color {
+    &_blue {
+      color: var(--white);
+      background-color: var(--blue);
+
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--blue-hover);
+        }
+      }
+    }
+  }
+}
