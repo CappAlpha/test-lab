@@ -2,7 +2,7 @@ import { type ModuleOptions } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { type BuildOptions } from './types/types';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
-export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
+export function buildLoaders (options: BuildOptions): ModuleOptions['rules'] {
     const isDev = options.mode === 'development';
     const assetLoader = {
         test: /\.(png|jpg|jpeg|gif|woff2|woff)$/i,
@@ -35,7 +35,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
             modules: {
                 auto: (resPath: string) => Boolean(resPath.includes('.module')),
                 localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
-            },
+            }
         }
     }
     const scssLoader = {
@@ -46,10 +46,10 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
             {
                 loader: 'sass-loader',
                 options: {
-                    additionalData: '@import "@/styles/mixins.scss";',
+                    additionalData: '@import "@/styles/mixins.scss";'
                 }
-            },
-        ],
+            }
+        ]
     }
 
     const tsLoader = {
