@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { IndexPage } from './pages/index/IndexPage';
+import { IndexPage } from './pages/IndexPage/IndexPage';
 
 export const App: FC = () => {
     return (

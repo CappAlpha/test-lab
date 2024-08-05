@@ -1,3 +1,29 @@
-.how {
-  
+.root {
+    @include wrap;
+}
+
+.header {
+    @include h2;
+    margin-bottom: 61px;
+    text-align: center;
+}
+
+.items {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 32px;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 2fr;
+    }
+
+    @include breakpoint(mobile-m) {
+        margin-bottom: 56px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }

@@ -1,0 +1,46 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+
+    @include breakpoint(tablet) {
+        flex-direction: row;
+    }
+
+    @include breakpoint(mobile-m) {
+        max-width: none;
+    }
+}
+
+.icon {
+    margin-bottom: 16px;
+
+    svg {
+        width: 72px;
+        height: 72px;
+    }
+
+    @include breakpoint(tablet) {
+        margin-bottom: 0px;
+        margin-right: 16px;
+
+        svg {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
+.header {
+    @include h6;
+    margin-bottom: 4px;
+}
+
+.description {
+    @include body14;
+    max-width: 240px;
+
+    @include breakpoint(mobile-m) {
+        max-width: none;
+    }
+}
